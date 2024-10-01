@@ -1,12 +1,15 @@
 package com.example.customcoloring;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.view.SurfaceView;
-import android.util.AttributeSet;
+        import android.content.Context;
+        import android.graphics.Canvas;
+        import android.graphics.Color;
+        import android.graphics.Paint;
+        import android.view.SurfaceView;
+        import android.util.AttributeSet;
 
 public class ColorElemView extends SurfaceView {
+
+    private int currentColor = Color.BLACK;  // Default color
 
     //ColorController handler;
     public ColorElemView(Context context, AttributeSet attrs) {
@@ -19,6 +22,11 @@ public class ColorElemView extends SurfaceView {
         super.onDraw(canvas); // Call the superclass method
 
         // Fill the entire canvas with red color
-        canvas.drawColor(Color.RED);
+        canvas.drawColor(currentColor);
+    }
+
+    public void setColor(int color) {
+        this.currentColor = color;  // Update the current color
+        invalidate();  // Trigger a redraw
     }
 }

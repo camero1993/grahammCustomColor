@@ -47,19 +47,8 @@ public class CustomRect extends CustomElement {
         Rect r = new Rect(left, top, right, bottom);
 
         return r.contains(x, y);
-    }//contaisPoint
+    }//containsPoint
 
-
-    @Override
-    public int getSize() {
-        return this.myRect.width() * this.myRect.height();
-    }
-
-    /*@Override
-    public void drawHighlight(Canvas canvas) {
-        canvas.drawRect(myRect, highlightPaint);
-        canvas.drawRect(myRect, outlinePaint);  //keep outline so it stands out
-    }*/
 
 
 
