@@ -21,7 +21,7 @@ public class ColorElemView extends SurfaceView {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas); // Call the superclass method
 
-        // Fill the entire canvas with red color
+        // Fill the entire canvas with current color
         canvas.drawColor(currentColor);
     }
 
